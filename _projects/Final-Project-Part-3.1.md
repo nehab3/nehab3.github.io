@@ -1,5 +1,5 @@
 ---
-name: Final Project Part 3.1 
+name: Final Project Part 3.1 - Group 6
 tools: [Python, HTML, Altair]
 image: assets/pngs/electric-car.png
 description: This is a submission for Final Project Part 3.1 by Neha Bharadwaj and Asmita Khode!
@@ -23,8 +23,26 @@ This article is aimed at describing a data driven analysis of how affordable ele
 
 These registered electric vehicles are majorly of two types : Battery Electric Vehicle(BEV) and Plug-In Hybrid Electric Vehicle (PHEV) , going forward we will be discussing these with their abbreviations which are BEV and PHEV as mentioned respectively.  
 
-### Visualization 1
-<vegachart schema-url="{{ site.baseurl }}/assets/json/mainViz1.json" style="width: 100%"></vegachart>
+### Visualization 1  
+
+<vegachart schema-url="{{ site.baseurl }}/assets/json/Final_plot1.json" style="width: 100%"></vegachart> 
+
+In this interactive visualization we have three plots. The main barplot at the top left shows the total count of Electric Vehicles by Model Year. The below two plots interacts with this main plot. When the Model Year is selected(click) by user, the scatter plot in bottom left changes accordinlgy to depict the distribution of electric vehicle by Make based on the year selected. Similarly, the barplot to the right of this shows the ditribution by County and Make for that particular year. All the plots have tooltips to shows user what data it is representing like the main plot has Model Year and Count of vehicles, the scatterplot has Model Year, Count along with Make whereas the second barplot has County, Model Year, Make and Count respectively. By default the two dependent plots shows cumulative data from all the year.  
+
+You can find the links to the data and Source code to this visualization below
+
+<div class="left">
+{% include elements/button.html link="https://github.com/nehab3/nehab3.github.io/blob/main/python_notebooks/Electric_Vehicle_Population_Data.csv" text="The Data" %}
+</div>
+
+<div class="right">
+{% include elements/button.html link="https://github.com/nehab3/nehab3.github.io/blob/main/python_notebooks/Homework%2310.ipynb" text="The Analysis" %}
+</div> 
+
+
+
+### Visualization 2
+<vegachart schema-url="{{ site.baseurl }}/assets/json/Final_plot2.json" style="width: 100%"></vegachart>
 
 This visualization here gives a measure of the electric range and base msrp for our vehicles in our primary dataset. This is an interactive visualization. As we can see in the plot there are 3 sets of bar plots.  
 
@@ -46,9 +64,9 @@ You can find the links to the data and Source code to this visualization below
 
 <br>
 
-### Visualization 2   
+### Visualization 3   
 
-<vegachart schema-url="{{ site.baseurl }}/assets/json/Final_Viz1.json" style="width: 100%"></vegachart>  
+<vegachart schema-url="{{ site.baseurl }}/assets/json/Final_plot3.json" style="width: 100%"></vegachart>  
 
 This visualization is aimed at taking a deeper look in to the number of electric vehicles registered in washington county wise.We can see two plots in the visualization and this is an interactive visualization as well.
 - The first plot is a simple scatter plot showing the total number of electric vehicles registered in each county.
@@ -60,7 +78,27 @@ Because looking at the data closesly there are some counties where people have p
 You can find the links to the data and Source code to this visualization below
 
 <div class="left">
-{% include elements/button.html link="https://github.com/nehab3/nehab3.github.io/blob/main/python_notebooks/Electric_Vehicle_Population_Data.csv" text="The Data" %}
+{% include elements/button.html link="https://data.wa.gov/api/views/3d5d-sdqb/rows.csv?accessType=DOWNLOAD" text="The Data" %}
+</div>
+
+<div class="right">
+{% include elements/button.html link="https://github.com/nehab3/nehab3.github.io/blob/main/python_notebooks/Homework%2310.ipynb" text="The Analysis" %}
+</div>  
+
+### Visualization 4   
+
+<vegachart schema-url="{{ site.baseurl }}/assets/json/Final_plot4.json" style="width: 100%"></vegachart>
+
+This visualization is created from "Electric Vehicle Title and Registration Activity" dataset. We have dropped the null values and also removed the duplicates to get exact number of register vehicles for State of Washington. For this visualization we had more than 5000 rows and by deafult altair allows only 5000 rows. To plot our full dataset we have disabled the max_rows parameter.  
+
+Here, we are using a scatter plot which shows the readings of Odometer by Vehicle Primary Use. From this plot we can see that the most Electric Vehicles are used as Passenger Vehicles and Passenger Vehicles have much higher Odometer readings. This plot has a click functionality. As user clicks on any type of Primary Use the line plot associated with this changes according to selection made. The line plot shows the Mean Odometer Readings by Year. It shows how mean Odometer readings for each type of Primary Use changed over the years
+
+Note: Due to the extrememly large size of the contextual dataset we have used a subset of random 5000 rows from the dataset to generate this plot
+
+You can find the links to the data and Source code to this visualization below
+
+<div class="left">
+{% include elements/button.html link="https://data.wa.gov/api/views/rpr4-cgyd/rows.csv?accessType=DOWNLOAD" text="The Data" %}
 </div>
 
 <div class="right">
