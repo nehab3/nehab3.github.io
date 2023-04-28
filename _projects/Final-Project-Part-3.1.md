@@ -16,6 +16,8 @@ custom_js:
 ### Final Project 3.1  
 
 
+<img src="/assets/pngs/electric-car.png"/>
+
 ###### Image Source : https://pixabay.com/illustrations/electric-car-gas-station-environment-2728131/  
 
 ### Introduction
@@ -29,18 +31,6 @@ These registered electric vehicles are majorly of two types : Battery Electric V
 
 In this interactive visualization we have three plots. The main barplot at the top left shows the total count of Electric Vehicles by Model Year. The below two plots interacts with this main plot. When the Model Year is selected(click) by user, the scatter plot in bottom left changes accordinlgy to depict the distribution of electric vehicle by Make based on the year selected. Similarly, the barplot to the right of this shows the ditribution by County and Make for that particular year. All the plots have tooltips to shows user what data it is representing like the main plot has Model Year and Count of vehicles, the scatterplot has Model Year, Count along with Make whereas the second barplot has County, Model Year, Make and Count respectively. By default the two dependent plots shows cumulative data from all the year.  
 
-You can find the links to the data and Source code to this visualization below
-
-<div class="left">
-{% include elements/button.html link="https://github.com/nehab3/nehab3.github.io/blob/main/python_notebooks/Electric_Vehicle_Population_Data.csv" text="The Data" %}
-</div>
-
-<div class="right">
-{% include elements/button.html link="https://github.com/nehab3/nehab3.github.io/blob/main/python_notebooks/Homework%2310.ipynb" text="The Analysis" %}
-</div> 
-
-
-
 ### Visualization 2
 <vegachart schema-url="{{ site.baseurl }}/assets/json/Final_plot2.json" style="width: 100%"></vegachart>
 
@@ -52,14 +42,14 @@ This visualization here gives a measure of the electric range and base msrp for 
 
 Now we can click on one of the bar charts in our primary plot such as selecting (BMW/Cadillac/Tesla) and as u click on these bars you will see that the 2 bar plots below it will change to show you the mean electric range and BASE msrp of electric vehicles of that make and will also depict on the x-axis wether the selected make manufactures only BEV , only PHEV or both.This particular visualization can help us understand and compare the electric vehicles of different vehicles in terms of capability and affordability.
 
-You can find the links to the data and Source code to this visualization below
+You can find the links to the data and Source code for Visualization 1 and 2 below
 
 <div class="left">
 {% include elements/button.html link="https://github.com/nehab3/nehab3.github.io/blob/main/python_notebooks/Electric_Vehicle_Population_Data.csv" text="The Data" %}
 </div>
 
 <div class="right">
-{% include elements/button.html link="https://github.com/nehab3/nehab3.github.io/blob/main/python_notebooks/Final%20Project%20Part%203%20-%20Group%206.ipynb" text="The Analysis" %}
+{% include elements/button.html link="https://github.com/nehab3/nehab3.github.io/blob/main/python_notebooks/Final%20Project%20part%203.1%20-%201.ipynb" text="The Analysis" %}
 </div>  
 
 <br>
@@ -82,7 +72,7 @@ You can find the links to the data and Source code to this visualization below
 </div>
 
 <div class="right">
-{% include elements/button.html link="https://github.com/nehab3/nehab3.github.io/blob/main/python_notebooks/Homework%2310.ipynb" text="The Analysis" %}
+{% include elements/button.html link="https://github.com/nehab3/nehab3.github.io/blob/main/python_notebooks/Final%20Project%20Part%203.1-2.ipynb" text="The Analysis" %}
 </div>  
 
 ### Visualization 4   
@@ -102,6 +92,15 @@ You can find the links to the data and Source code to this visualization below
 </div>
 
 <div class="right">
-{% include elements/button.html link="https://github.com/nehab3/nehab3.github.io/blob/main/python_notebooks/Homework%2310.ipynb" text="The Analysis" %}
+{% include elements/button.html link="https://github.com/nehab3/nehab3.github.io/blob/main/python_notebooks/Final%20Project%20Part%203.1%20-3.ipynb" text="The Analysis" %}
 </div>
+
+### Sources  
+- Hosting using jekyll : https://uiuc-ischool-dataviz.github.io/is445_oauoag_spring2023/week10/installation_instructions_week11.html  
+- Electric Vehicle Title and Registration Activity Dataset: https://catalog.data.gov/dataset/electric-vehicle-title-and-registration-activity/resource/d045f505-3b06-4471-953c-1a754c295a9c
+- Electric vehicle population size by county Dataset : https://catalog.data.gov/dataset/electric-vehicle-population-size-history-by-county/resource/de0258e2-3542-4703-aad4-dcebd9d1f195  
+- Altair Documentation : https://pypi.org/project/altair/
+- Altair User guide : https://altair-viz.github.io/user_guide/interactions.html
+- Code : https://uiuc-ischool-dataviz.github.io/is445_oauoag_spring2023/nbv.html?notebook_name=%2Fis445_oauoag_spring2023%2Fweek12%2FinClass_week12.ipynb
+
 
