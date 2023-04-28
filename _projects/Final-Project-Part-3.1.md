@@ -1,6 +1,7 @@
 ---
 name: Final Project Part 3.1 
-tools: [Python, HTML, vega-lite]
+tools: [Python, HTML, Altair]
+image: assets/pngs/electric-car.png
 description: This is a submission for Final Project Part 3.1 by Neha Bharadwaj and Asmita Khode!
 custom_js:
   - vega.min
@@ -12,30 +13,54 @@ custom_js:
 
 # Building a future with EV's : A deeper dive into the capabilities and affordability of electric vehicles in the US  
 ## By Neha Bharadwaj & Asmita Khode  
-### Final Proejct 3.1
-
-<vegachart schema-url="{{ site.baseurl }}/assets/json/mainViz1.json.json" style="width: 100%"></vegachart>
-
-### Note  
+### Final Project 3.1  
 
 
+###### Image Source : https://pixabay.com/illustrations/electric-car-gas-station-environment-2728131/  
 
-## Plot 2  
+### Introduction
+This article is aimed at describing a data driven analysis of how affordable electric cars are along with understanding what sort of capabilities they have vs their affordability. The main two parameters we will discuss in our article would be the Electric range and the Base MSRP of the electric vehicles. The data used for this article is limited to the state of washington in USA.  
 
-<vegachart schema-url="{{ site.baseurl }}/assets/json/Final_Viz1.json.json" style="width: 100%"></vegachart>  
+These registered electric vehicles are majorly of two types : Battery Electric Vehicle(BEV) and Plug-In Hybrid Electric Vehicle (PHEV) , going forward we will be discussing these with their abbreviations which are BEV and PHEV as mentioned respectively.  
 
-### Note  
+### Visualization 1
+<vegachart schema-url="{{ site.baseurl }}/assets/json/mainViz1.json" style="width: 100%"></vegachart>
 
+This visualization here gives a measure of the electric range and base msrp for our vehicles in our primary dataset. This is an interactive visualization. As we can see in the plot there are 3 sets of bar plots.  
 
+- First bar plot describes count of electric vehicles for different types of Make
+- Second plot gives the mean electric rannge for both BEV and PHEV , this mean as of now is calculated based on the mean electric range of all vehicles irrespective of their make
+- The third bar plot describes the mean BASE msrp for BEV and PHEV irrespective of Make , as it takes full database into account just like our second plot.  
 
-## Search The Data & Methods
+Now we can click on one of the bar charts in our primary plot such as selecting (BMW/Cadillac/Tesla) and as u click on these bars you will see that the 2 bar plots below it will change to show you the mean electric range and BASE msrp of electric vehicles of that make and will also depict on the x-axis wether the selected make manufactures only BEV , only PHEV or both.This particular visualization can help us understand and compare the electric vehicles of different vehicles in terms of capability and affordability.
 
-Below is where we can put some links to both the data and the analysis code as buttons:
-
-<!-- these are written in a combo of html and liquid --> 
+You can find the links to the data and Source code to this visualization below
 
 <div class="left">
-{% include elements/button.html link="https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/bfro_reports_fall2022.csv" text="The Data" %}
+{% include elements/button.html link="https://github.com/nehab3/nehab3.github.io/blob/main/python_notebooks/Electric_Vehicle_Population_Data.csv" text="The Data" %}
+</div>
+
+<div class="right">
+{% include elements/button.html link="https://github.com/nehab3/nehab3.github.io/blob/main/python_notebooks/Final%20Project%20Part%203%20-%20Group%206.ipynb" text="The Analysis" %}
+</div>  
+
+<br>
+
+### Visualization 2   
+
+<vegachart schema-url="{{ site.baseurl }}/assets/json/Final_Viz1.json" style="width: 100%"></vegachart>  
+
+This visualization is aimed at taking a deeper look in to the number of electric vehicles registered in washington county wise.We can see two plots in the visualization and this is an interactive visualization as well.
+- The first plot is a simple scatter plot showing the total number of electric vehicles registered in each county.
+- The second visualization as is depicts a stacked bar chart showing the number of BEV and PHEV registered in each county.Here the red portion depicts the count of PHEV's and the blue part depicts the count of BEV's and you can see the same by hovering on this bar plot.
+
+The intereactivity here allows you to drag and select certain scatter points on the first plot and the second plot will modify to give you the distribution of only those counties that are selected. This detailed visualization helps us understand which type of electric vehicle people are preffering BEV or PHEV and why are they doing so. In our first visualization we saw that the electric range for the BEV's is much higher than the mean range for the PHEVs while the BASE MSRP was comparable for both. So a real point to investigate here would be to see if these are the only two parameters affecting the choice of the car purchased or are there more attributes such as location and weather that are also playing a role in the choice the consumers are making.  
+Because looking at the data closesly there are some counties where people have preferred PHEV over BEV and some counties where it is the opposite.  
+
+You can find the links to the data and Source code to this visualization below
+
+<div class="left">
+{% include elements/button.html link="https://github.com/nehab3/nehab3.github.io/blob/main/python_notebooks/Electric_Vehicle_Population_Data.csv" text="The Data" %}
 </div>
 
 <div class="right">
