@@ -14,7 +14,7 @@ custom_js:
 ## By Neha Bharadwaj & Asmita Khode  
 ### Final Proejct 3.1
 
-<vegachart schema-url="{{ site.baseurl }}/assets/json/Viz1.json" style="width: 100%"></vegachart>
+<vegachart schema-url="{{ site.baseurl }}/assets/json/mainViz1.json.json" style="width: 100%"></vegachart>
 
 ### Note  
 
@@ -22,13 +22,11 @@ custom_js:
 
 ## Plot 2  
 
-<vegachart schema-url="{{ site.baseurl }}/assets/json/Viz2.json" style="width: 100%"></vegachart>  
+<vegachart schema-url="{{ site.baseurl }}/assets/json/Final_Viz1.json.json" style="width: 100%"></vegachart>  
 
 ### Note  
 
-In this scatter plot we have used quantitative encoding for both the axes since we have the numerical data. This plots depicts the relation between humidity level and respective precipitation probability during different seasons. We also have an associated bar plot below the scatter plot which changes according to the area selected in the scatter plot.
-On selecting a certain area on the scatter plot the bar plot below it changes to depic the mean precipitation probability for each season within the selected region.
-We have used different colors to represent different season so can be identified separately.
+
 
 ## Search The Data & Methods
 
